@@ -1,0 +1,33 @@
+body {
+  overflow: hidden;
+}
+
+button {
+  font-size: 1.5em;
+  margin: 1em;
+  padding: 0.5em 0.75em;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -300px;
+  width: 300px;
+  background-color: #333;
+  transition: transform 0.3s ease-in-out;
+
+  &.is-open {
+    transform: translateX(-300px);
+  }
+
+  > a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 1em 1.5em;
+    + a {
+      border-top: 1px solid white;
+    }
+  }
+}
