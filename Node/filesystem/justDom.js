@@ -56,3 +56,26 @@ const array = Array.from(HTMLAllCollection);
 array.forEach(el => {
   console.log(el);
 })
+
+const fruits = {
+  apple: 28,
+  orange: 17,
+  pear: 54,
+}
+
+const keys = Object.keys(fruits);
+console.log(keys);
+
+const values = Object.values(fruits);
+console.log(values);
+
+const entries = Object.entries(fruits);
+console.log(entries);
+
+for (const key of keys) {
+  console.log(key);
+}
+
+for (const [fruit, count] of entries) {
+  console.log(`There are ${count} ${fruit}s`)
+}
