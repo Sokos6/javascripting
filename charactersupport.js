@@ -39,3 +39,18 @@ ele.addEventListener('keydown', function(e) {
   };
 });
 
+ele.addEventListener('input', function(e) {
+  const target = e.target;
+
+  if (/^[0-9s]*$/.test(target.value)) {
+      currentValue = target.value;
+  } else {
+      // Users enter the not supported characters
+      // Restore the value and selection
+      target.value = currentValue;
+      target.setSelectionRange(
+          selection.selectionStart,
+          selection.selectionEnd
+      );
+  }
+});
