@@ -46,8 +46,6 @@ console.log(NewColors);
 
 console.log(colors.join(' & '));
 
-
-
 console.log(colors.slice(2, 4));
 
 // non destructive operation. Colors still intact
@@ -57,7 +55,7 @@ console.log(colors);
 // The second number tells us how many items to remove from the array.
 // Notice the splice() method returns the items removed from the array as a subarray.
 
-justthis = colors.splice(1, 1, 'Gold')
+justthis = colors.splice(1, 1, 'Gold');
 console.log(colors);
 console.log(justthis);
 
@@ -67,7 +65,6 @@ console.log(colors.reverse());
 console.log(colors.sort());
 
 console.log([5, 9, 7].sort());
-
 
 // Finding if a Value is in an Array
 
@@ -79,3 +76,19 @@ console.log(colors.includes('Black'));
 // You can also add an extra parameter to indicate which index to start the search from:
 console.log('Teal', 1);
 
+// Multidimensiaonal arrays
+
+const coordinates = [
+  [1, 3],
+  [4, 2],
+];
+
+console.log([0][0]);
+console.log(coordinates[1][0]);
+
+const summer = ['Jun', 'Jul', 'Aug'];
+const winter = ['Dec', 'Jan', 'Feb'];
+const nested = [summer, winter];
+console.log(nested);
+const flatten = [...summer, ...winter];
+console.log(flatten);
