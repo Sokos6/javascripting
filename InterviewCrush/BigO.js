@@ -1,3 +1,13 @@
+// a tool we use for talking about how much time an algorithm takes to run or how much space a data structure takes up in RAM. It's pretty simple:
+
+// O(1)O(1) or constant means the time or space stays about the same even as the dataset gets bigger and bigger.
+
+// O(n)O(n) or linear means the time or space grows proportionally as the dataset grows.
+
+// So O(1)O(1) space is much smaller than O(n)O(n) space. And O(1)O(1) time is much faster than O(n)O(n) time.
+
+
+
 // This function funs in O(1) time, or 'constant time' relative to it's input
 // The input array could be 1 item of 1000 items, this function would
 // still just require one 'step'
