@@ -1,3 +1,4 @@
+// Simple reversal - need to work through reversing an array without reverse()
 function reversed(arr) {
   return arr.reverse();
 }
