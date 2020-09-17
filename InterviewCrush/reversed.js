@@ -27,4 +27,4 @@ function reverse(arrayOfChars) {
   }
 }
 
-console.log(reverse(['a', 'c', 'g', 'd', 'y']));
+console.log(reverse(['Test']));
