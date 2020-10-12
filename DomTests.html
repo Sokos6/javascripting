@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom Tests</title>
+    <script>
+      function setBodyAttr(attr, value) {
+        if (document.body) document.body[attr] = value;
+        else throw new Error('no support');
+        console.log(value);
+      }
+    </script>
+  </head>
+  <body>
+    <div style="margin: 0.5in; height: 400px">
+      <p>
+        <b><span>Text</span></b>
+        <form>
+            <select onchange="setBodyAttr('text', this.options[this.selectedIndex].value);">
+                <option value='black'>black</option>
+                <option value='red'>red</option>
+            </select>
+        </form>
+      </p>
+    </div>
+  </body>
+</html>
