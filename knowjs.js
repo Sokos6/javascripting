@@ -90,5 +90,36 @@ let whatToSay = {
 };
 
 whatToSay.greeting();
-whatToSay.question()
+whatToSay.question();
 whatToSay.answer();
+
+var x = [1, 2, 3];
+
+// assignment is by reference-copy, so
+// y references the *same* array as x,
+// not another copy of it.
+
+var y = x;
+
+x.push(1);
+console.log(y);
+console.log(y === x);
+console.log(y === [1, 2, 3, 1]);
+console.log(x === [1, 2, 3, 1]);
+// In this snippet, y === x is true
+// because both variables hold a reference
+// to the same initial array. But the === [1,2,3]
+// comparisons both fail because y and x,
+// respectively, are being compared to new different
+// arrays [1,2,3]. The array structure and contents
+// don't matter in this comparison, only the reference identity.
+
+var arr = ['1', '10', '100', '1000'];
+
+for (var value of arr) {
+  console.log(value);
+}
+
+for (let i = 0; i < arr.length && arr[i] < 500; i++) {
+  console.log(arr[i]);
+}
